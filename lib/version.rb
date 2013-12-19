@@ -1,4 +1,4 @@
 module ZdRequester
-  VERSION = "0.0.1"
-  VERSION_DATE = "2013-12-18"
+  VERSION = "0.0.2"
+  VERSION_DATE = "2013-12-19"
 end
