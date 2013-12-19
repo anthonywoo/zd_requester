@@ -26,6 +26,8 @@ module ZdRequester
       end
       puts "post done. #{Time.now - start} seconds to complete"
 
+      responses.select! { |response| response.status == 201 }
+
       responses.map! do |response|
         return_id(response)
       end
