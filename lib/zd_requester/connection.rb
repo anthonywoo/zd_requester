@@ -15,7 +15,7 @@ module ZdRequester
       @connection.basic_auth(user, pass)
     end
 
-    def multi_post(count, data = nil) #returns ids
+    def multi_post(count, data = {}) #returns ids
       puts "post started"
       start = Time.now
       responses = []
