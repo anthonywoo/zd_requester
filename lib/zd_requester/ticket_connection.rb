@@ -6,7 +6,7 @@ module ZdRequester
     end
 
     def default_data
-      {"ticket" => {"subject" => "MultiTicket #{Time.now}", "comment" => { "body" => "Faraday" }}}.to_json
+      {"ticket" => {"subject" => "MultiTicket #{Time.now}", "comment" => { "body" => "Faraday" }}}
     end
 
     def return_id(response)

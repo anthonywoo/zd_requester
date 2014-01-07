@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency('faraday')
   s.add_dependency('typhoeus')
   s.add_dependency('json')
+  s.add_dependency('activesupport')
 
   s.require_paths = ["lib"]
   s.files = `git ls-files`.split("\n")

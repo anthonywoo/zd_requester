@@ -6,7 +6,7 @@ module ZdRequester
     end
 
     def default_data
-      {"macro" => {"title" => "Roger Macro #{rand(1000)}", "actions" => [{"field" => "status", "value" => "solved"}]}}.to_json
+      {"macro" => {"title" => "Roger Macro #{rand(1000)}", "actions" => [{"field" => "status", "value" => "solved"}]}}
     end
 
     def return_id(response)

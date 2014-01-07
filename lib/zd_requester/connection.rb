@@ -2,6 +2,7 @@ require 'faraday'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
 require 'json'
+require 'active_support/core_ext/hash'
 
 module ZdRequester
   class Connection
@@ -20,7 +21,7 @@ module ZdRequester
       responses = []
       @connection.in_parallel do
         count.times do |i|
-          json_data = data || default_data
+          json_data = default_data.deep_merge(data).to_json
           responses << post(json_data)
         end
       end
