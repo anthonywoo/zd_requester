@@ -16,6 +16,7 @@ module ZdRequester
     end
 
     def multi_post(count, data = {}) #returns ids
+      return unless valid_data?(data)
       puts "post started"
       start = Time.now
       responses = []
@@ -60,9 +61,12 @@ module ZdRequester
       end
     end
 
-    def get 
+    def get
       @connection.get "#{endpoint}.json"
     end
 
+    def valid_data?(data)
+      true
+    end
   end
 end
